@@ -1,0 +1,14 @@
+name: "megaschoool"
+
+services:
+  megaschool:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: megaschool
+    hostname: megaschool
+    restart: "unless-stopped"
+    env_file:
+      - .env
+    ports:
+      - "8080:8080"
