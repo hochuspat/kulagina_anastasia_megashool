@@ -122,4 +122,4 @@ class WebQueryService:
         return AgentResponse(**response_data)
 
     def signature(self):
-        return "\nresponse provided by " + self._model_version
+        return f"\n{self._model_version}"
